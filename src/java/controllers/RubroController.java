@@ -121,7 +121,8 @@ public class RubroController extends BeanBase implements Serializable {
     public String edita(){
         this.registroMod=new Rubro();
         //Pongo los datos a modificar del registro seleccionado
-        registroMod.setId(registroSel.getId());
+        registroMod.setId(registroSel.getId());        
+        registroMod.setAreaNegocio(registroSel.getAreaNegocio());
         registroMod.setNombre(registroSel.getNombre());
         this.modo="M";
         return "Rubro";
@@ -161,6 +162,15 @@ public class RubroController extends BeanBase implements Serializable {
         FacesMessage msg;
         Session session = null;
         Rubro u=this.getRegistroMod();
+        int li_area;
+        
+        li_area=registroMod.getAreaNegocio().getId();
+        if (li_area==0)
+        {
+            msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Debe seleccionar un área","Areas");
+            FacesContext.getCurrentInstance().addMessage(null, msg);
+            return;
+        }
        
         try{
             session=HibernateUtil.getSessionFactory().openSession();

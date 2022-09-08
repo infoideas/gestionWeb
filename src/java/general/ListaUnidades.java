@@ -50,7 +50,7 @@ public class ListaUnidades extends BeanBase {
 
         try{
             org.hibernate.Transaction tx =  session.beginTransaction();
-            Query q=session.createQuery("from Unidad a order by a.nombre");
+            Query q=session.createQuery("from UnidadMedida a order by a.nombre");
             Iterator i=q.list().iterator();
             
             while (i.hasNext()){

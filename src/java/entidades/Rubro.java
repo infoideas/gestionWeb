@@ -12,7 +12,7 @@ public class Rubro  implements java.io.Serializable {
 
 
      private Integer id;
-     private AreaNegocio areaNegocio;
+     private AreaNegocio areaNegocio = new AreaNegocio();
      private String nombre;
      private Set<Producto> productos = new HashSet<Producto>(0);
      private Set<SubRubro> subRubros = new HashSet<SubRubro>(0);

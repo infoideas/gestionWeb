@@ -43,6 +43,13 @@
                             <h:outputText  value="#{item.id}" />
                         </p:column>
                     
+                        <p:column sortBy="#{item.areaNegocio.nombre}" style="font-size: 10pt; color: #045491">
+                            <f:facet name="header">
+                                <h:outputText value="Area"/>
+                            </f:facet>
+                            <h:outputText  value="#{item.areaNegocio.nombre}"/>
+                        </p:column>
+                        
                         <p:column sortBy="#{item.nombre}" style="font-size: 10pt; color: #045491">
                             <f:facet name="header">
                                 <h:outputText value="Nombre"/>

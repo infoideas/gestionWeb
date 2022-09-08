@@ -29,10 +29,10 @@
             <column name="detalle" length="65535" />
         </property>
         <property name="precioContado" type="big_decimal">
-            <column name="precio_contado" precision="20" not-null="true" />
+            <column name="precio_contado" precision="20" />
         </property>
         <property name="precioLista" type="big_decimal">
-            <column name="precio_lista" precision="20" not-null="true" />
+            <column name="precio_lista" precision="20" />
         </property>
         <property name="idIva" type="java.lang.Short">
             <column name="idIVa" />

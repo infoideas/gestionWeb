@@ -280,7 +280,7 @@ public class LogIn extends BeanBase implements Serializable {
              //Invalido la sesion
              session.invalidate();
              
-             FacesContext.getCurrentInstance().getExternalContext().redirect("/estancia/LogIn.xhtml");
+             FacesContext.getCurrentInstance().getExternalContext().redirect("/gestion/LogIn.xhtml");
              return;
              //return("/LogIn");
             }

@@ -59,21 +59,23 @@
                                 <h:outputText value="Nombre"/>
                             </f:facet>
                             <h:outputText  value="#{item.nombre}"/>
-                        </p:column>                        
+                        </p:column>   
                         
-                        <p:column sortBy="#{item.descripcion}" style="width: 25%; font-size: 8pt; color: #045491">
-                            <f:facet name="header">
-                                <h:outputText value="Descripción"/>
-                            </f:facet>
-                            <h:outputText  value="#{item.descripcion}"/>
-                        </p:column>                           
-                        
-                        <p:column style="width: 25%; font-size: 8pt; color: #045491; text-align: right">
+                        <p:column style="width: 25%; font-size: 8pt; color: #045491">
                             <f:facet name="header">
                                 <h:outputText value="Rubro"/>
                             </f:facet>
                             <h:outputText  value="#{item.rubro.nombre}"/>
                         </p:column>     
+                        
+                        <p:column sortBy="#{item.descripcion}" style="width: 25%; font-size: 8pt; color: #045491">
+                            <f:facet name="header">
+                                <h:outputText value="Descripción"/>
+                            </f:facet>
+                            <h:outputText  value="#{item.detalle}"/>
+                        </p:column>                           
+                        
+                        
                         
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}"

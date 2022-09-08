@@ -13,6 +13,11 @@
             <h:form id="EditForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{rubrocontroller.registroMod != null}">
+                        <p:outputLabel value="Area:" for="area" style="font-size: 10pt; color: #045491"/>                        
+                        <p:selectOneMenu id="area" value="#{rubrocontroller.registroMod.areaNegocio.id}" 
+                                         required="true" style="font-size: 10pt; color: #045491 ">
+                            <f:selectItems value="#{listaareas.items}" />
+                        </p:selectOneMenu> 
                         <p:outputLabel value="#{bundle.IdCategoria}" for="id" style="font-size: 10pt; color: #045491"/>
                         <h:outputText id="id" value="#{rubrocontroller.registroMod.id}" style="font-size: 10pt; color: #045491"/>
                         <p:outputLabel value="Nombre:" for="nombre" style="font-size: 10pt; color: #045491"/>
