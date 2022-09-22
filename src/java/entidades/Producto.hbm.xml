@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26 ago. 2022 21:12:34 by Hibernate Tools 4.3.1 -->
+<!-- Generated 19 sep. 2022 19:32:23 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entidades.Producto" table="producto" catalog="gestion" optimistic-lock="version" lazy="false">
+    <class name="entidades.Producto" table="producto" catalog="gestion" optimistic-lock="version"
+        lazy="false">
         <comment>Productos</comment>
         <id name="id" type="java.lang.Integer">
             <column name="id" />
@@ -52,6 +53,18 @@
                 <comment>Determina si se imprime comanda para el producto</comment>
             </column>
         </property>
+        <set name="listaPreciosLocalDets" table="lista_precios_local_det" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="entidades.ListaPreciosLocalDet" />
+        </set>
+        <set name="listaPreciosDets" table="lista_precios_det" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="entidades.ListaPreciosDet" />
+        </set>
         <set name="ventaDets" table="venta_det" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="idProducto" not-null="true" />
