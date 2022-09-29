@@ -199,7 +199,7 @@ public class ListaPrecioController extends BeanBase implements Serializable {
         try{
             session=HibernateUtil.getSessionFactory().openSession();
             org.hibernate.Transaction tx=session.beginTransaction();
-            Query q=session.createQuery("from ListaPrecios a where fecCarga >= :fec_desde and fecCarga <= :fec_hasta");
+            Query q=session.createQuery("from ListaPrecios a where fecCarga >= :fec_desde and fecCarga <= :fec_hasta order by a.id desc");
             q.setParameter("fec_desde",lda_fecha_desde);
             q.setParameter("fec_hasta",lda_fecha_hasta);
             this.lista=(List<ListaPrecios>) q.list();

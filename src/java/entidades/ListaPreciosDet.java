@@ -12,7 +12,7 @@ public class ListaPreciosDet  implements java.io.Serializable {
 
      private Integer id;
      private ListaPrecios listaPrecios;
-     private Producto producto;
+     private Producto producto= new Producto();
      private BigDecimal precio;
 
     public ListaPreciosDet() {

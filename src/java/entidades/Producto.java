@@ -14,8 +14,8 @@ public class Producto  implements java.io.Serializable {
 
      private Integer id;
      private Marca marca;
-     private Rubro rubro;
-     private UnidadMedida unidadMedida;
+     private Rubro rubro= new Rubro();
+     private UnidadMedida unidadMedida= new UnidadMedida();
      private String nombre;
      private String detalle;
      private BigDecimal precioContado;
