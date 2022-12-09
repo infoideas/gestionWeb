@@ -25,10 +25,10 @@ import org.hibernate.Session;
  *
  * @author rafael
  */
-
+ 
 @SessionScoped
 @Named("areacontroller")
-public class AreaController extends BeanBase implements Serializable {
+public class AreaController extends BeanBase implements Serializable{
     AreaNegocio registroSel;
     AreaNegocio registroMod;
     private String modo="";

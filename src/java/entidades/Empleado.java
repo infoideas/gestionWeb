@@ -13,10 +13,10 @@ public class Empleado  implements java.io.Serializable {
 
 
      private Integer id;
-     private Cargo cargo;
-     private Localidad localidad;
-     private Pais pais;
-     private Provincia provincia;
+     private Cargo cargo= new Cargo();
+     private Localidad localidad= new Localidad();
+     private Pais pais= new Pais();
+     private Provincia provincia= new Provincia();
      private String apellido;
      private String nombre;
      private Integer legajo;
